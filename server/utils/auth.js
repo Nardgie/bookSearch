@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken");
 const User = require("../models/User"); // Ensure the correct path to User model
 
 // set token secret and expiration date
-const secret = "mysecretsshhhhh";
+const secret = "mysecretssshhhhhhh";
 const expiration = "2h";
 
 // Custom authentication error
