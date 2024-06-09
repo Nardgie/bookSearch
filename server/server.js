@@ -7,7 +7,6 @@ const { authMiddleware } = require("./utils/auth");
 
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
-const routes = require('./routes');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -38,7 +37,7 @@ const startApolloServer = async () => {
   }
 
   // start the apollo server
-  
+
   db.once("open", () => {
     app.listen(PORT, () => {
       console.log(`API server running on port ${PORT}!`);
