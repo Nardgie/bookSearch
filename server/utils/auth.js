@@ -36,9 +36,9 @@ const authMiddleware = async ({ req }) => {
 };
 
 // Function to sign a new token
-const signToken = function ({ username, email, _id, isAdmin }) {
-  console.log("In sign toke, isAdmin: " + isAdmin);
-  const payload = { username, email, _id, isAdmin };
+const signToken = function ({ username, email, _id }) {
+  // console.log("In sign toke, isAdmin: " + isAdmin);
+  const payload = { username, email, _id };
   return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
 };
 
